@@ -37,24 +37,18 @@
     "@typescript-eslint/no-unused-vars": [
       "error",
       { "argsIgnorePattern": "^_" }
+    ],
+
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [["module"], ["parent", "sibling", "index"]],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
     ]
-    // "import/extensions": [
-    //   "error",
-    //   "ignorePackages",
-    //   {
-    //     "js": "always"
-    //   }
-    // ],
-    // "import-helpers/order-imports": [
-    //   "warn",
-    //   {
-    //     "newlinesBetween": "always",
-    //     "groups": [["module"], ["parent", "sibling", "index"]],
-    //     "alphabetize": {
-    //       "order": "asc",
-    //       "ignoreCase": true
-    //     }
-    //   }
-    // ]
   }
 }

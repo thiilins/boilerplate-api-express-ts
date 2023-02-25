@@ -1,7 +1,6 @@
+import config from '@/config/auth.js'
 import { Request, Response, NextFunction } from 'express'
 import jwt from 'jsonwebtoken'
-
-import config from '@/config/auth.js'
 
 interface TokenPayload {
   id: string
