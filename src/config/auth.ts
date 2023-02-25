@@ -1,4 +1,4 @@
 export default {
-  secret: 'INSERT_YOUR_SALT',
+  secret: process.env.JWT_SECRET,
   expire: '1d',
 }

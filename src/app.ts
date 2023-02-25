@@ -6,6 +6,8 @@ import swaggerUI from 'swagger-ui-express'
 
 import routes from '@/app/routes'
 import swaggerFile from '@/swagger.json'
+import dotenv from 'dotenv'
+dotenv.config()
 
 /*
  * Habilitando e Adicionando Middlewares
