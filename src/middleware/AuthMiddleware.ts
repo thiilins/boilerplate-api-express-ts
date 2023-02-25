@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import jwt from 'jsonwebtoken'
 
-import config from '@/config/auth'
+import config from '@/config/auth.js'
 
 interface TokenPayload {
   id: string
@@ -16,7 +16,7 @@ interface AuthenticatedRequest extends Request {
 export default async (
   req: AuthenticatedRequest,
   res: Response,
-  next: NextFunction,
+  next: NextFunction
 ) => {
   const auth = req.headers.authorization
   if (!auth) {
@@ -27,7 +27,7 @@ export default async (
   }
   const [, token] = auth.split(' ')
   try {
-    const decoded = jwt.verify(token, config.secret) as TokenPayload
+    const decoded = jwt.verify(token, config.secret as any) as TokenPayload
     if (decoded) {
       req.user_id = decoded.id
       req.isAdmin = decoded.isAdmin
