@@ -1,24 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2021", "ES2022"],
-    "module": "ES2022",
-    "rootDir": "./",
-    "moduleResolution": "Node",
-    "baseUrl": "./",
-    "forceConsistentCasingInFileNames": true,
+    "target": "es6",
+    "module": "commonjs",
     "outDir": "./dist",
+    "rootDir": "./",
     "strict": true,
+    "strictPropertyInitialization": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@models/*": ["./src/models/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@middlewares/*": ["./src/middlewares/*"]
+    },
+    "allowJs": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "paths": {
-      "@/*": ["src/*"],
-      "@helpers/*": ["./src/helpers/*"],
-      "@models/*": ["src/models/*"],
-      "@modules/*": ["src/modules/*"],
-      "@middlewares/*": ["src/middlewares/*"]
-    },
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */
-  }
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

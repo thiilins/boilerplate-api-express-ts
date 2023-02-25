@@ -1,7 +1,7 @@
 import express, { Express } from 'express'
 import path from 'path'
 import cors from 'cors'
-import routes from './modules/routes.js'
+import routes from '@modules/routes'
 /*
  * Habilitando e Adicionando Middlewares
  */
@@ -9,7 +9,7 @@ import routes from './modules/routes.js'
 const app: Express = express()
 app.use(express.static(path.resolve('src', 'public'))) // Definindo a Pasta Public
 app.use(express.json()) //Habilitando JSON  e configurando recebimento de formulário
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ limit: '100mb', extended: false }))
 // Habilitando methodOverride
 app.use(cors())
 /**

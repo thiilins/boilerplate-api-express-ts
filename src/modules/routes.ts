@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import mainRoutes from './main/main.routes.js'
+import mainRoutes from '@modules/main/main.routes'
 
 const router = Router()
 

@@ -1,6 +1,6 @@
-import { normalizePort } from './helpers/normalizePort.js'
+import { normalizePort } from '@/helpers/normalizePort'
 
-import app from './app.js'
+import app from '@/app'
 
 const PORT: any = normalizePort(process.env.PORT || '3000')
 
